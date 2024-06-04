@@ -11,8 +11,13 @@ def main():
         print("Usage: python gematrie.py <word> [<word> ...]")
         sys.exit(1)
 
+    sum = 0
     for word in sys.argv[1:]:
-        print(f"{word}: {alphabeticValueSum(word)}")
+        val = alphabeticValueSum(word)
+        print(f"{word}: {val}")
+        sum += val
+
+    print(f"\nSum: {sum}")
 
 
 if __name__ == "__main__":
